@@ -158,7 +158,7 @@ class: img-right, compact
 
 # Poor uses of folders
 
-![](/datascience_images/images/lots_o_files.png)
+![](/datascience_presentations/images/lots_o_files.png)
 
 - One folder to rule them all
 
@@ -222,7 +222,7 @@ class: img-left-full, compact
 
 # Tools of the trade (VCS)
 
-![](/datascience_images/images/git_commit.png)
+![](/datascience_presentations/images/git_commit.png)
 
 ## Version Control Software
 
@@ -241,7 +241,7 @@ class: img-right
 
 # Tools of the trade (Workflows)
 
-![](/datascience_images/images/rnaseq.png)
+![](/datascience_presentations/images/rnaseq.png)
 
 - Orchestrate analysis using workflow software
   - Galaxy
@@ -253,7 +253,7 @@ class: img-right
 
 # Project Folder Organization
 
-![](/datascience_images/images/example_folder.png)
+![](/datascience_presentations/images/example_folder.png)
 
 - Folder structure is personal preference
 - Folder names are personal preference
@@ -327,7 +327,7 @@ data # original and external
 ```
 ]
 
-![](/datascience_images/images/snakefile.png# absolute l-40pct t-0 h-100pct)
+![](/datascience_presentations/images/snakefile.png# absolute l-40pct t-0 h-100pct)
 
 ---
 .absolute.l-2.w-40pct[
@@ -347,7 +347,7 @@ src/    # project level package
 ```
 ]
 
-![](/datascience_images/images/modularize.png# absolute l-50pct t-0 w-50pct)
+![](/datascience_presentations/images/modularize.png# absolute l-50pct t-0 w-50pct)
 
 ---
 class: compact
@@ -541,7 +541,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/datascience_images/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
+![](/datascience_presentations/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
 
 ---
 # Functions and Classes
@@ -576,7 +576,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/datascience_images/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_presentations/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
 
 .footer[https://github.com/markusschanta/awesome-jupyter]
 
@@ -594,7 +594,7 @@ Add as much information about your samples.
     - **hugo**
 ]
 
-![](/datascience_images/images/blog.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_presentations/images/blog.png# absolute l-6-12th t-0 w-50pct)
 
 ---
 # 10 Best Practices
