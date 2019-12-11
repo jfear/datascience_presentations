@@ -29,10 +29,10 @@ class: col-2
 - IRTA Fellow (NIDDK/NIH)
   - <i class="fas fa-dna"></i> Genomics
   - <i class="fas fa-project-diagram"></i> Gene Regulation
-  - <img src="/images/drosophila-wt.jpg" width="4%"/> Drosophila
+  - <img src="/datascience_presentations/images/drosophila-wt.jpg" width="4%"/> Drosophila
 
 - Contact:
-  - <i class="fab fa-github"></i> @jfear
+  - <i class="fab fa-github"></i> [@jfear](https://github.com/jfear)
   - <i class="fas fa-envelope-open-text"></i> justin.fear@nih.gov
 
 <!-- TODO Fix publication URL -->
@@ -41,7 +41,7 @@ class: col-2
 
 ---
 class: title, smokescreen
-background-image: url("/images/organization.jpg")
+background-image: url("/datascience_presentations/images/organization.jpg")
 
 <!-- ############################ Part 1 ############################ -->
 # Why Project Organization
@@ -158,7 +158,7 @@ class: img-right, compact
 
 # Poor uses of folders
 
-![](/images/lots_o_files.png)
+![](/datascience_images/images/lots_o_files.png)
 
 - One folder to rule them all
 
@@ -222,7 +222,7 @@ class: img-left-full, compact
 
 # Tools of the trade (VCS)
 
-![](/images/git_commit.png)
+![](/datascience_images/images/git_commit.png)
 
 ## Version Control Software
 
@@ -241,7 +241,7 @@ class: img-right
 
 # Tools of the trade (Workflows)
 
-![](/images/rnaseq.png)
+![](/datascience_images/images/rnaseq.png)
 
 - Orchestrate analysis using workflow software
   - Galaxy
@@ -253,7 +253,7 @@ class: img-right
 
 # Project Folder Organization
 
-![](/images/example_folder.png)
+![](/datascience_images/images/example_folder.png)
 
 - Folder structure is personal preference
 - Folder names are personal preference
@@ -327,7 +327,7 @@ data # original and external
 ```
 ]
 
-![](/images/snakefile.png# absolute l-40pct t-0 h-100pct)
+![](/datascience_images/images/snakefile.png# absolute l-40pct t-0 h-100pct)
 
 ---
 .absolute.l-2.w-40pct[
@@ -347,7 +347,7 @@ src/    # project level package
 ```
 ]
 
-![](/images/modularize.png# absolute l-50pct t-0 w-50pct)
+![](/datascience_images/images/modularize.png# absolute l-50pct t-0 w-50pct)
 
 ---
 class: compact
@@ -541,7 +541,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
+![](/datascience_images/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
 
 ---
 # Functions and Classes
@@ -576,7 +576,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_images/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
 
 .footer[https://github.com/markusschanta/awesome-jupyter]
 
@@ -594,7 +594,7 @@ Add as much information about your samples.
     - **hugo**
 ]
 
-![](/images/blog.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_images/images/blog.png# absolute l-6-12th t-0 w-50pct)
 
 ---
 # 10 Best Practices
