@@ -188,7 +188,7 @@ do_more_stuff()
 > Beginners often write lots of comments describing each step.
 > They the copy and paste from the script onto the command line.
 
-.myheader[\> Please don't do this]
+.myheader[\> Don't do this]
 
 ---
 class: title, smokescreen
@@ -203,71 +203,95 @@ class: img-right-full, compact
 
 ![](https://p2.piqsels.com/preview/213/564/1010/yoda-lego-legoland-star-wars.jpg)
 
-- Development Environment
 - Version Control
 - Workflow Tools
+- Development Environment(s)
 
 ---
-class: img-left-full, compact
+class: compact
 
 # Version Control System (VCS)
 
-![](/datascience_presentations/images/git_commit.png)
+## .center[A.K.A track changes]
 
-## A.k.a Track Changes
+![](/datascience_presentations/images/git-branch.png# absolute t-4 r-0)
 
-- Popular Tools
-  - Git
-  - Mercurial
-  - VCS
-  - CVS
+.absolute.t-3-12th.l-3[
 
-- Cloud Storage
-  - Github (git)
-  - GitLab (git)
-  - Bitbucket (multi)
+### Popular Tools
 
-- Data Is Different
-  - git-lfs
+- Git
+- Mercurial
+- VCS
+- CVS
+
+### Cloud Storage
+
+- Github
+- GitLab
+- Bitbucket
+]
+
+.absolute.t-3-12th.l-4-12th[
+
+### Data Is Different
+- git-lfs
+]
+
+.myheader[\> Master Your Weapons]
 
 ---
-class: img-right
+class: img-caption
 
 # Workflow Management
 
 ![](/datascience_presentations/images/rnaseq.png)
 
-- Orchestrate analysis using workflow software
-  - Galaxy
-  - Make
-  - Snakemake
+.absolute.t-1.l-1[Galaxy]
+.absolute.t-1.r-1[Snakemake]
+.absolute.b-2.l-1[Make]
+.absolute.b-2.r-1[Airflow]
 
 ---
-class: img-right-full
+class: compact
 
 # Development Environment
 
-<!-- TODO: Add vscode figure -->
-![]()
-
-## IDEs Speed Development Time
+![](/datascience_presentations/images/vscode.png# w-60pct absolute b-1 r-1)
 
 - Syntax Highlighting
 - Code Completion
 - Refactoring Tools
 - Debugging Tools
-- Integration with version control
-- Integration with containers/environments
+- Version control
+- Containers/Environments
 - Remote development ove SSH
 
+## Text Editors
+- vim
+- emacs
+- nano
+
 ---
-class: img-right-full
+class: compact
 
-# Could Development Environment
+# Could Development
 
-## Web browser == Dev Env
+![](/datascience_presentations/images/gigantum_notebook.png# w-60pct absolute r-2 t-0)
+![](/datascience_presentations/images/gigantum.png# w-30pct absolute l-5-12th b-0)
 
-- Jupyter on steroids
+### Examples
+
+- VScode Online
+- Azure Notebooks
+- Google Colab
+- Datalore
+- CoCalc
+- Binder
+
+### Gigantum
+
+- Jupyter + RStudio in the cloud
 - Container based environment
 - Automatic Version Control
 
@@ -283,15 +307,18 @@ class: img-right
 
 ## There are general .red[*best practices*]
 
+.footer[[Example Project](https://github.com/jfear/example_project)]
+
 ---
 
 .absolute.l-7-12th.w-40pct[
 
 # 1. Use the same folder structure and names across projects
 
+## Don't be afraid to tweak
 ]
 
-![](example_folder.png# absolute l-0 t-0 h-100pct)
+![](/datascience_presentations/images/example_folder.png# absolute l-0 t-0 h-100pct)
 
 ---
 class: compact
