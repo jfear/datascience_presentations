@@ -1,14 +1,16 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Organizing Data Science Projects</title><link rel=alternate type=application/rss+xml title=RSS href=http://geneticsunderground.com/datascience_presentations/index.xml><link rel=canonical href=http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/><link rel="shortcut icon" type=image/png href=http://geneticsunderground.com/datascience_presentations/apple-touch-icon-precomposed.png><meta name=generator content="Hugo 0.61.0"><meta property="og:title" content="Organizing Data Science Projects"><meta property="og:type" content="article"><meta property="og:image" content="http://geneticsunderground.com/slides/organize/nci/cover.jpg"><meta property="og:description" content><meta property="og:url" content="http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/"><meta property="og:site_name" content="Organizing Data Science Projects"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@"><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/apron.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/adirondack.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/descartes.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/slides.css></style><style type=text/css>@page{size:1216px 684px;margin:0}</style><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous><link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&subset=latin-ext" rel=stylesheet><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=http://geneticsunderground.com/datascience_presentations/js/story.js></script></head><body class="ma0 bg-white section-slides page-kind-page is-page-true feature-highlight feature-qrcode"><main role=main><textarea id=source>class: title, smokescreen
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Organizing Data Science Projects</title><link rel=alternate type=application/rss+xml title=RSS href=http://geneticsunderground.com/datascience_presentations/index.xml><link rel=canonical href=http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/><link rel="shortcut icon" type=image/png href=http://geneticsunderground.com/datascience_presentations/apple-touch-icon-precomposed.png><meta name=generator content="Hugo 0.61.0"><meta property="og:title" content="Organizing Data Science Projects"><meta property="og:type" content="article"><meta property="og:image" content="http://geneticsunderground.com/slides/organize/nci/cover.jpg"><meta property="og:description" content><meta property="og:url" content="http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/"><meta property="og:site_name" content="Organizing Data Science Projects"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@"><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/apron.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/adirondack.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/descartes.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/slides.css></style><style type=text/css>@page{size:1216px 684px;margin:0}</style><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous><link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&subset=latin-ext" rel=stylesheet><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><script src=http://geneticsunderground.com/datascience_presentations/js/story.js></script></head><body class="ma0 bg-white section-slides page-kind-page is-page-true feature-qrcode"><main role=main><textarea id=source>class: title, smokescreen
 background-image: url(https://media.defense.gov/2017/Jun/22/2001767169/-1/-1/0/170519-F-OR423-002.JPG)
 
 # Organizing Data Science Projects
 
-## NCI Workshop, 2019-12-12
+## CBIIT/FNL Workshop -- December 12, 2019
 
 ---
 class: col-2
 
-# Justin M Fear
+# About
+
+## Justin M. Fear
 
 - IRTA Fellow (NIDDK/NIH)
   - &lt;i class=&#34;fas fa-dna&#34;&gt;&lt;/i&gt; Genomics
@@ -27,66 +29,51 @@ class: col-2
 class: title, smokescreen
 background-image: url(&#34;/datascience_presentations/images/organization.jpg&#34;)
 
-&lt;!-- ############################ Part 1 ############################ --&gt;
-# Why Project Organization
+# Why Project Organization &lt;!-- Part 1 --&gt;
 
 ---
-class: img-right-full
+class: img-right-full, roomy
 
 # Find things quickly
 
 ![](https://cdn.pixabay.com/photo/2017/02/13/16/10/scooby-doo-2063042_960_720.png)
 
-## (≤ 10 min)
-
-- Find the exact code used to generate result
+- Find the code used to generate result
 - Tweak a plot
-- Jump back into a project picking up where you left off
+- Pickup where you left off
 
 .myheader[\&gt; Why Project Organization]
 
 ---
-class: img-right
-
-# Reuse code
-
-![](https://thinkingrecords.files.wordpress.com/2013/09/recordsmanagementgetsautomated1-colour-42.jpeg)
-
-## Automate the boring stuff
-
-- Standardized workflows
-- Modularize code for testing, maintenance, and usability
-- Save brain power for fun tasks
-
-.myheader[\&gt; Why Project Organization]
-
----
-class: img-right
+class: img-right, roomy
 
 # Share code and results
 
 ![](https://i.imgflip.com/1ulazs.jpg)
 
-- Quickly show a collaborator what you did
-- Summarize side analyses for archive
+- Send snippets to collaborator
+- Show colleague what you did
+- Track tangential analysis
 
 .myheader[\&gt; Why Project Organization]
 
 ---
-class: img-right
+class: img-right, roomy
 
 # Recover from data disasters
 
 ![](https://live.staticflickr.com/4017/4529320513_ba3d22388f_z.jpg)
 
-- Oops we swapped sample names now you need to re-run
-- We forgot to tell you about these addition 10 samples
+- Oops we swapped sample names
+- Forgot to give you these addition 10 samples
 - The file we sent you was truncated
+- I accidentally deleted your folder on the share drive
 
 .myheader[\&gt; Why Project Organization]
 
 ---
-class: img-caption
+class: img-caption, roomy
+
 ![](https://miro.medium.com/max/1838/1*ACoKY0p7DSt4FGcZNjkP2Q.jpeg)
 
 # Reproducible Research
@@ -97,99 +84,94 @@ class: img-caption
 class: title, smokescreen
 background-image: url(https://summary.org/wp-content/uploads/2018/12/Messy02.jpeg)
 
-# Have you seen this?
+# Don&#39;t Do This &lt;!-- Part 2 --&gt;
 
-## Please don&#39;t do this
+## How to make a mess
 
 ---
-class: compact
+class: col-2
 
 # Poor uses of file names
 
-.fl.db[
+## Version Control
+
 &lt;pre&gt;&lt;code class=&#34;Shell&#34;&gt;
-.
-&lt;mark class=&#34;highlight&#34;&gt;├── deg_jmf_final_v2.sh&lt;/mark&gt;
-├── deg_lmm_final.sh
 ├── deg_lmm_v1.sh
 ├── deg_lmm_v2.sh
-├── deg_step1_jmf_v1.sh
-&lt;mark class=&#34;highlight&#34;&gt;├── deg_step2a_jmf_v1.sh&lt;/mark&gt;
-├── deg_step2_jmf_v1.sh
-├── deg_step3_jmf_v1.sh
-├── deg_step3_jmf_v2.sh
-├── deg_step3_lmm_v1.sh
-├── download_data_v1.sh
-└── download_data_v2.sh
+├── deg_lmm_final.sh
+&lt;mark class=&#34;highlight&#34;&gt;├── deg_jmf_final_v2.sh&lt;/mark&gt;
 &lt;/code&gt;&lt;/pre&gt;
-]
 
-.fr.db.w-60pct[
-* File names are not great for version control
-&gt; If you name something final, you will always have another version.
-* File names are not great at ordering steps in a workflow
-&gt; Adding or re-ordering steps is confusing at best.
-]
+- If you name something final, you will always have another version.
 
-.absolute.w-6-12th.pa-3.l-5-12th.t-70pct.ba.bw-3.br-4.bg-white-60pct[
+## Workflow
+
+&lt;pre&gt;&lt;code class=&#34;Shell&#34;&gt;
+├── deg_step1_jmf_v1.sh
+├── deg_step2_jmf_v1.sh
+&lt;mark class=&#34;highlight&#34;&gt;├── deg_step2a_jmf_v1.sh&lt;/mark&gt;
+├── deg_step3_jmf_v1.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+- Adding or re-ordering steps is confusing at best.
+
+.absolute.center.w-6-12th.pa-1.l-3-12th.b-1.ba.bw-3.br-4.bg-white-60pct[
 Make file names descriptive and concise.
 ]
 
-.myheader[\&gt; Please don&#39;t do this]
+.myheader[\&gt; Don&#39;t do this]
 
 ---
-class: img-right, compact
+class: img-right-full, compact
 
 # Poor uses of folders
 
 ![](/datascience_presentations/images/lots_o_files.png)
 
-- One folder to rule them all
+## One folder to rule them all
 
-&gt; For small projects you can get by with putting everything in a single
-&gt; folder. But, once you have more than 20 files it is hard to find things.
-&gt; Using search is only useful if you know what you are searching for.
+- Hard to browse ≥ 30 files
+- Search requires you to know what you are looking for
 
-- Too many folders
+## Too many folders
 
-&gt; As above, once you get more than 20 or so folders is becomes hard to find things.
+- Lots folder levels are hard to browse too
+- Easy to loose files
 
-.w-6-12th.pa-1.ba.bw-3.br-4.bg-white-60pct.fs-90[
+.w-10-12th.pa-1.ba.bw-3.br-4.bg-white-60pct.fs-90[
 Make your own folder hierarchy and stick to it.
 ]
 
-.myheader[\&gt; Please don&#39;t do this]
+.myheader[\&gt; Don&#39;t do this]
 
 ---
-class: compact
+class: col-2, compact
 
 # Poor uses of scripts
 
-.fl.db[
-&lt;pre&gt;&lt;code class=&#34;Bash&#34;&gt;
-# Run this part first
-# bunch of lines of code
+## Comment and Uncomment
 
-# Run this part second
-# bunch of lines of code
+```bash
+# Run first
+# wget ...
+# export FILE=&#34;./this_file.txt&#34;
+# ... 300 more lines of code ...
 
-# Run this part third
-&lt;mark class=&#34;highlight&#34;&gt;bunch of lines of code&lt;/mark&gt;
+# Run third
+export FILE=&#34;./that_file.yaml&#34;
+do_more_stuff()
+```
 
-# Run this part fourth
-# bunch of lines of code
-&lt;/code&gt;&lt;/pre&gt;
-]
+- Doesn&#39;t track what was done
+- Generates different results if run in different order
 
-.fr.db.w-60pct[
-- Don&#39;t comment and uncomment parts of script
-&gt; Your-future-self will have no clue what was actually run
+## Copy and Paste
 
+- A script is meant to be run
 - Don&#39;t copy and paste from a script
-&gt; Beginners often has scripts with lots of comments describing each step.
-&gt; They the copy and paste from the script onto the command line. Like
-&gt; commenting and uncommenting you may not know exactly what you did.
-]
+
+&gt; Beginners often write lots of comments describing each step.
+&gt; They the copy and paste from the script onto the command line.
 
 .myheader[\&gt; Please don&#39;t do this]
 
@@ -197,9 +179,29 @@ class: compact
 class: title, smokescreen
 background-image: url(http://www.freestufffinder.com/wp-content/uploads/2018/08/tina-marie-kondo-folding-method.jpg)
 
-# How to get organized
+# How to get organized &lt;!-- Part 3 --&gt;
 
-&lt;!-- ############################ Part 3 ############################ --&gt;
+---
+class: img-right-full, compact
+
+# Master Your Weapons &lt;!-- Part 3a: Tools --&gt;
+
+![](https://p2.piqsels.com/preview/213/564/1010/yoda-lego-legoland-star-wars.jpg)
+
+- Development Environment
+- Version Control
+- Workflow Tools
+
+---
+class: col-2
+
+# Development Environment
+
+- Command Line Editors
+  - Vim, Emacs, Nano
+- Data Science IDEs
+  - &lt;img src=&#34;/datascience_presentations/images/rstudio.png&#34; width=&#34;30%&#34; style=&#34;vertical-align: middle;&#34;&gt;
+  - &lt;img src=&#34;/datascience_presentations/images/jupyter_logo.png&#34; width=&#34;15%&#34; style=&#34;vertical-align: middle;&#34;&gt;
 
 ---
 class: img-left-full, compact
@@ -247,7 +249,9 @@ class: img-right
 ---
 
 .absolute.l-7-12th.w-40pct[
+
 # 1. Use the same folder structure and names across projects
+
 ]
 
 ![](example_folder.png# absolute l-0 t-0 h-100pct)
@@ -299,7 +303,8 @@ data # original and external
 
 ---
 .absolute.l-2.w-30pct[
-## 3. Uses workflows to orchestrate
+
+# 3. Uses workflows to orchestrate
 
 ```bash
 ./example1-wf
@@ -315,7 +320,8 @@ data # original and external
 
 ---
 .absolute.l-2.w-40pct[
-## 4. Modularize reusable code
+
+# 4. Modularize reusable code
 
 ```bash
 lcdb-wf@56c948d  #submodules
@@ -338,7 +344,7 @@ class: compact
 
 .absolute.l-2.w-40pct[
 
-## 5. Use a style guide and linters
+# 5. Use a style guide and linters
 
 * Consistent style improves readability
 * Just google my language and style guide
@@ -383,6 +389,7 @@ for (i in seq(10)) {
 
 ---
 class: compact
+
 # 6. Split out configuration for consistency
 
 .absolute.l-2.w-40pct[
@@ -401,6 +408,7 @@ class: compact
 ]
 
 .fr.db.w-50pct[
+
 ## Project config
 
 Contains info that is needed across the project.
@@ -421,6 +429,7 @@ Anything you may tweak in the future.
 
 ---
 class: fit-h1, compact
+
 # 7. Use containers and environments (portability and reproducibility)
 
 One of the hardest problems in data science is managing software.
@@ -440,6 +449,7 @@ One of the hardest problems in data science is managing software.
 ]
 
 .fr.db.w-50pct[
+
 ## Containers (Docker, Singularity)
 
 * Completely reproducible system
@@ -456,13 +466,12 @@ One of the hardest problems in data science is managing software.
 class: title, smokescreen
 background-image: url(https://www.mayerdan.com/assets/img/ring-binders.jpg)
 
-# 8., 9., 10. Documentation
+# 8., 9., 10. Documentation &lt;!-- Part 4 --&gt;
 
 ## What is not documented, stays not documented
 
-&lt;!-- ############################ Part 4 ############################ --&gt;
-
 ---
+
 # What to document (Everything!)
 
 .ul-space[
@@ -479,6 +488,7 @@ background-image: url(https://www.mayerdan.com/assets/img/ring-binders.jpg)
 **6 months from now, your future-self will thank you!**
 
 ---
+
 # Where to document (Everywhere!)
 
 .ul-space[
@@ -515,6 +525,7 @@ class: compact
 Add as much information about your samples.
 
 ---
+
 # Top of Scripts
 
 .fl.db.w-50pct[
@@ -528,6 +539,7 @@ Add as much information about your samples.
 ![](/datascience_presentations/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
 
 ---
+
 # Functions and Classes
 
 .fl.db.w-50pct[
@@ -541,6 +553,7 @@ Add as much information about your samples.
 ![](modularize.png# absolute l-6-12th t-0 w-50pct)
 
 ---
+
 # Literate Programming
 
 .fl.db.w-50pct[
@@ -565,6 +578,7 @@ Add as much information about your samples.
 .footer[https://github.com/markusschanta/awesome-jupyter]
 
 ---
+
 # Dedicated Project Blog
 
 .ul-space[
@@ -581,7 +595,8 @@ Add as much information about your samples.
 ![](/datascience_presentations/images/blog.png# absolute l-6-12th t-0 w-50pct)
 
 ---
-# 10 Best Practices
+
+# 10 Best Practices &lt;!-- Summary --&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Use the same structure and names across projects&lt;/li&gt;

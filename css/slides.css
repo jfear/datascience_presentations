@@ -19,6 +19,10 @@
     color: red !important;
 }
 
+.green {
+    color: green !important;
+}
+
 .remark-slide-content h2 {
     font-size: 2.2rem !important;
 }
@@ -29,4 +33,8 @@
 
 .ul-space li {
     margin: 0 0 1rem 0;
+}
+
+.remark-slide-content li:not(:last-child) {
+    margin: 0 0 .5rem 0;
 }
