@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Organizing Data Science Projects</title><link rel=alternate type=application/rss+xml title=RSS href=http://geneticsunderground.com/datascience_presentations/index.xml><link rel=canonical href=http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/><link rel="shortcut icon" type=image/png href=http://geneticsunderground.com/datascience_presentations/apple-touch-icon-precomposed.png><meta name=generator content="Hugo 0.61.0"><meta property="og:title" content="Organizing Data Science Projects"><meta property="og:type" content="article"><meta property="og:image" content="http://geneticsunderground.com/slides/organize/nci/cover.jpg"><meta property="og:description" content><meta property="og:url" content="http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/"><meta property="og:site_name" content="Organizing Data Science Projects"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@"><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/apron.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/adirondack.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/descartes.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/slides.css></style><style type=text/css>@page{size:1216px 684px;margin:0}</style><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous><link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&subset=latin-ext" rel=stylesheet><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><script src=http://geneticsunderground.com/datascience_presentations/js/story.js></script></head><body class="ma0 bg-white section-slides page-kind-page is-page-true feature-qrcode"><main role=main><textarea id=source>class: title, smokescreen
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Organizing Data Science Projects</title><link rel=alternate type=application/rss+xml title=RSS href=http://geneticsunderground.com/datascience_presentations/index.xml><link rel=canonical href=http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/><link rel="shortcut icon" type=image/png href=http://geneticsunderground.com/datascience_presentations/apple-touch-icon-precomposed.png><meta name=generator content="Hugo 0.55.6"><meta property=og:title content="Organizing Data Science Projects"><meta property=og:type content=article><meta property=og:image content=http://geneticsunderground.com/slides/organize/nci/cover.jpg><meta property=og:description content><meta property=og:url content=http://geneticsunderground.com/datascience_presentations/slides/organize/nci-20191212/><meta property=og:site_name content="Organizing Data Science Projects"><meta name=twitter:card content=summary_large_image><meta name=twitter:site content=@><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/apron.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/adirondack.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/descartes.css></style><link rel=stylesheet type=text/css href=http://geneticsunderground.com/datascience_presentations/css/slides.css></style><style type=text/css>@page{size:1216px 684px;margin:0}</style><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous><link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel=stylesheet><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><script src=http://geneticsunderground.com/datascience_presentations/js/story.js></script></head><body class="ma0 bg-white section-slides page-kind-page is-page-true  feature-qrcode"><main role=main><textarea id=source>class: title, smokescreen
 background-image: url(https://media.defense.gov/2017/Jun/22/2001767169/-1/-1/0/170519-F-OR423-002.JPG)
 
 # Organizing Data Science Projects
@@ -173,7 +173,7 @@ do_more_stuff()
 &gt; Beginners often write lots of comments describing each step.
 &gt; They the copy and paste from the script onto the command line.
 
-.myheader[\&gt; Please don&#39;t do this]
+.myheader[\&gt; Don&#39;t do this]
 
 ---
 class: title, smokescreen
@@ -188,51 +188,97 @@ class: img-right-full, compact
 
 ![](https://p2.piqsels.com/preview/213/564/1010/yoda-lego-legoland-star-wars.jpg)
 
-- Development Environment
 - Version Control
 - Workflow Tools
+- Development Environment(s)
 
 ---
-class: col-2
+class: compact
 
-# Development Environment
+# Version Control System (VCS)
 
-- Command Line Editors
-  - Vim, Emacs, Nano
-- Data Science IDEs
-  - &lt;img src=&#34;/datascience_presentations/images/rstudio.png&#34; width=&#34;30%&#34; style=&#34;vertical-align: middle;&#34;&gt;
-  - &lt;img src=&#34;/datascience_presentations/images/jupyter_logo.png&#34; width=&#34;15%&#34; style=&#34;vertical-align: middle;&#34;&gt;
+## .center[A.K.A track changes]
+
+![](/datascience_presentations/images/git-branch.png# absolute t-4 r-0)
+
+.absolute.t-3-12th.l-3[
+
+### Popular Tools
+
+- Git
+- Mercurial
+- VCS
+- CVS
+
+### Cloud Storage
+
+- Github
+- GitLab
+- Bitbucket
+]
+
+.absolute.t-3-12th.l-4-12th[
+
+### Data Is Different
+- git-lfs
+]
+
+.myheader[\&gt; Master Your Weapons]
 
 ---
-class: img-left-full, compact
+class: img-caption
 
-# Tools of the trade (VCS)
-
-![](/datascience_presentations/images/git_commit.png)
-
-## Version Control Software
-
-- Use VCS such as git
-&gt; VCS is like MS Words track changes
-
-- Use the cloud to store to your code
-&gt; Github, GitLab, and Bitbucket are common places to store
-&gt; your version controlled code.
-&gt;
-&gt; You can make code private or public, and it is available 
-&gt; anywhere with internet.
-
----
-class: img-right
-
-# Tools of the trade (Workflows)
+# Workflow Management
 
 ![](/datascience_presentations/images/rnaseq.png)
 
-- Orchestrate analysis using workflow software
-  - Galaxy
-  - Make
-  - Snakemake
+.absolute.t-1.l-1[Galaxy]
+.absolute.t-1.r-1[Snakemake]
+.absolute.b-2.l-1[Make]
+.absolute.b-2.r-1[Airflow]
+
+---
+class: compact
+
+# Development Environment
+
+![](/datascience_presentations/images/vscode.png# w-60pct absolute b-1 r-1)
+
+- Syntax Highlighting
+- Code Completion
+- Refactoring Tools
+- Debugging Tools
+- Version control
+- Containers/Environments
+- Remote development ove SSH
+
+## Text Editors
+- vim
+- emacs
+- nano
+
+---
+class: compact
+
+# Could Development
+
+![](/datascience_presentations/images/gigantum_notebook.png# w-60pct absolute r-2 t-0)
+![](/datascience_presentations/images/gigantum.png# w-30pct absolute l-5-12th b-0)
+
+### Examples
+
+- VScode Online
+- Azure Notebooks
+- Google Colab
+- Datalore
+- CoCalc
+- Binder
+
+### Gigantum
+
+- Jupyter &#43; RStudio in the cloud
+- Container based environment
+- Automatic Version Control
 
 ---
 class: img-right
@@ -246,15 +292,18 @@ class: img-right
 
 ## There are general .red[*best practices*]
 
+.footer[[Example Project](https://github.com/jfear/example_project)]
+
 ---
 
 .absolute.l-7-12th.w-40pct[
 
 # 1. Use the same folder structure and names across projects
 
+## Don&#39;t be afraid to tweak
 ]
 
-![](example_folder.png# absolute l-0 t-0 h-100pct)
+![](/datascience_presentations/images/example_folder.png# absolute l-0 t-0 h-100pct)
 
 ---
 class: compact
