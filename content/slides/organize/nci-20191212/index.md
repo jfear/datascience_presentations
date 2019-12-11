@@ -10,7 +10,6 @@ themes:
 - descartes
 - slides
 classes:
-- feature-highlight
 - feature-qrcode
 
 ---
@@ -19,12 +18,14 @@ background-image: url(https://media.defense.gov/2017/Jun/22/2001767169/-1/-1/0/1
 
 # Organizing Data Science Projects
 
-## NCI Workshop, 2019-12-12
+## CBIIT/FNL Workshop -- December 12, 2019
 
 ---
 class: col-2
 
-# Justin M Fear
+# About
+
+## Justin M. Fear
 
 - IRTA Fellow (NIDDK/NIH)
   - <i class="fas fa-dna"></i> Genomics
@@ -43,66 +44,51 @@ class: col-2
 class: title, smokescreen
 background-image: url("/datascience_presentations/images/organization.jpg")
 
-<!-- ############################ Part 1 ############################ -->
-# Why Project Organization
+# Why Project Organization <!-- Part 1 -->
 
 ---
-class: img-right-full
+class: img-right-full, roomy
 
 # Find things quickly
 
 ![](https://cdn.pixabay.com/photo/2017/02/13/16/10/scooby-doo-2063042_960_720.png)
 
-## (≤ 10 min)
-
-- Find the exact code used to generate result
+- Find the code used to generate result
 - Tweak a plot
-- Jump back into a project picking up where you left off
+- Pickup where you left off
 
 .myheader[\> Why Project Organization]
 
 ---
-class: img-right
-
-# Reuse code
-
-![](https://thinkingrecords.files.wordpress.com/2013/09/recordsmanagementgetsautomated1-colour-42.jpeg)
-
-## Automate the boring stuff
-
-- Standardized workflows
-- Modularize code for testing, maintenance, and usability
-- Save brain power for fun tasks
-
-.myheader[\> Why Project Organization]
-
----
-class: img-right
+class: img-right, roomy
 
 # Share code and results
 
 ![](https://i.imgflip.com/1ulazs.jpg)
 
-- Quickly show a collaborator what you did
-- Summarize side analyses for archive
+- Send snippets to collaborator
+- Show colleague what you did
+- Track tangential analysis
 
 .myheader[\> Why Project Organization]
 
 ---
-class: img-right
+class: img-right, roomy
 
 # Recover from data disasters
 
 ![](https://live.staticflickr.com/4017/4529320513_ba3d22388f_z.jpg)
 
-- Oops we swapped sample names now you need to re-run
-- We forgot to tell you about these addition 10 samples
+- Oops we swapped sample names
+- Forgot to give you these addition 10 samples
 - The file we sent you was truncated
+- I accidentally deleted your folder on the share drive
 
 .myheader[\> Why Project Organization]
 
 ---
-class: img-caption
+class: img-caption, roomy
+
 ![](https://miro.medium.com/max/1838/1*ACoKY0p7DSt4FGcZNjkP2Q.jpeg)
 
 # Reproducible Research
@@ -113,99 +99,94 @@ class: img-caption
 class: title, smokescreen
 background-image: url(https://summary.org/wp-content/uploads/2018/12/Messy02.jpeg)
 
-# Have you seen this?
+# Don't Do This <!-- Part 2 -->
 
-## Please don't do this
+## How to make a mess
 
 ---
-class: compact
+class: col-2
 
 # Poor uses of file names
 
-.fl.db[
+## Version Control
+
 <pre><code class="Shell">
-.
-<mark class="highlight">├── deg_jmf_final_v2.sh</mark>
-├── deg_lmm_final.sh
 ├── deg_lmm_v1.sh
 ├── deg_lmm_v2.sh
-├── deg_step1_jmf_v1.sh
-<mark class="highlight">├── deg_step2a_jmf_v1.sh</mark>
-├── deg_step2_jmf_v1.sh
-├── deg_step3_jmf_v1.sh
-├── deg_step3_jmf_v2.sh
-├── deg_step3_lmm_v1.sh
-├── download_data_v1.sh
-└── download_data_v2.sh
+├── deg_lmm_final.sh
+<mark class="highlight">├── deg_jmf_final_v2.sh</mark>
 </code></pre>
-]
 
-.fr.db.w-60pct[
-* File names are not great for version control
-> If you name something final, you will always have another version.
-* File names are not great at ordering steps in a workflow
-> Adding or re-ordering steps is confusing at best.
-]
+- If you name something final, you will always have another version.
 
-.absolute.w-6-12th.pa-3.l-5-12th.t-70pct.ba.bw-3.br-4.bg-white-60pct[
+## Workflow
+
+<pre><code class="Shell">
+├── deg_step1_jmf_v1.sh
+├── deg_step2_jmf_v1.sh
+<mark class="highlight">├── deg_step2a_jmf_v1.sh</mark>
+├── deg_step3_jmf_v1.sh
+</code></pre>
+
+- Adding or re-ordering steps is confusing at best.
+
+.absolute.center.w-6-12th.pa-1.l-3-12th.b-1.ba.bw-3.br-4.bg-white-60pct[
 Make file names descriptive and concise.
 ]
 
-.myheader[\> Please don't do this]
+.myheader[\> Don't do this]
 
 ---
-class: img-right, compact
+class: img-right-full, compact
 
 # Poor uses of folders
 
 ![](/datascience_presentations/images/lots_o_files.png)
 
-- One folder to rule them all
+## One folder to rule them all
 
-> For small projects you can get by with putting everything in a single
-> folder. But, once you have more than 20 files it is hard to find things.
-> Using search is only useful if you know what you are searching for.
+- Hard to browse ≥ 30 files
+- Search requires you to know what you are looking for
 
-- Too many folders
+## Too many folders
 
-> As above, once you get more than 20 or so folders is becomes hard to find things.
+- Lots folder levels are hard to browse too
+- Easy to loose files
 
-.w-6-12th.pa-1.ba.bw-3.br-4.bg-white-60pct.fs-90[
+.w-10-12th.pa-1.ba.bw-3.br-4.bg-white-60pct.fs-90[
 Make your own folder hierarchy and stick to it.
 ]
 
-.myheader[\> Please don't do this]
+.myheader[\> Don't do this]
 
 ---
-class: compact
+class: col-2, compact
 
 # Poor uses of scripts
 
-.fl.db[
-<pre><code class="Bash">
-# Run this part first
-# bunch of lines of code
+## Comment and Uncomment
 
-# Run this part second
-# bunch of lines of code
+```bash
+# Run first
+# wget ...
+# export FILE="./this_file.txt"
+# ... 300 more lines of code ...
 
-# Run this part third
-<mark class="highlight">bunch of lines of code</mark>
+# Run third
+export FILE="./that_file.yaml"
+do_more_stuff()
+```
 
-# Run this part fourth
-# bunch of lines of code
-</code></pre>
-]
+- Doesn't track what was done
+- Generates different results if run in different order
 
-.fr.db.w-60pct[
-- Don't comment and uncomment parts of script
-> Your-future-self will have no clue what was actually run
+## Copy and Paste
 
+- A script is meant to be run
 - Don't copy and paste from a script
-> Beginners often has scripts with lots of comments describing each step.
-> They the copy and paste from the script onto the command line. Like
-> commenting and uncommenting you may not know exactly what you did.
-]
+
+> Beginners often write lots of comments describing each step.
+> They the copy and paste from the script onto the command line.
 
 .myheader[\> Please don't do this]
 
@@ -213,9 +194,29 @@ class: compact
 class: title, smokescreen
 background-image: url(http://www.freestufffinder.com/wp-content/uploads/2018/08/tina-marie-kondo-folding-method.jpg)
 
-# How to get organized
+# How to get organized <!-- Part 3 -->
 
-<!-- ############################ Part 3 ############################ -->
+---
+class: img-right-full, compact
+
+# Master Your Weapons <!-- Part 3a: Tools -->
+
+![](https://p2.piqsels.com/preview/213/564/1010/yoda-lego-legoland-star-wars.jpg)
+
+- Development Environment
+- Version Control
+- Workflow Tools
+
+---
+class: col-2
+
+# Development Environment
+
+- Command Line Editors
+  - Vim, Emacs, Nano
+- Data Science IDEs
+  - <img src="/datascience_presentations/images/rstudio.png" width="30%" style="vertical-align: middle;">
+  - <img src="/datascience_presentations/images/jupyter_logo.png" width="15%" style="vertical-align: middle;">
 
 ---
 class: img-left-full, compact
@@ -263,7 +264,9 @@ class: img-right
 ---
 
 .absolute.l-7-12th.w-40pct[
+
 # 1. Use the same folder structure and names across projects
+
 ]
 
 ![](example_folder.png# absolute l-0 t-0 h-100pct)
@@ -315,7 +318,8 @@ data # original and external
 
 ---
 .absolute.l-2.w-30pct[
-## 3. Uses workflows to orchestrate
+
+# 3. Uses workflows to orchestrate
 
 ```bash
 ./example1-wf
@@ -331,7 +335,8 @@ data # original and external
 
 ---
 .absolute.l-2.w-40pct[
-## 4. Modularize reusable code
+
+# 4. Modularize reusable code
 
 ```bash
 lcdb-wf@56c948d  #submodules
@@ -354,7 +359,7 @@ class: compact
 
 .absolute.l-2.w-40pct[
 
-## 5. Use a style guide and linters
+# 5. Use a style guide and linters
 
 * Consistent style improves readability
 * Just google my language and style guide
@@ -399,6 +404,7 @@ for (i in seq(10)) {
 
 ---
 class: compact
+
 # 6. Split out configuration for consistency
 
 .absolute.l-2.w-40pct[
@@ -417,6 +423,7 @@ class: compact
 ]
 
 .fr.db.w-50pct[
+
 ## Project config
 
 Contains info that is needed across the project.
@@ -437,6 +444,7 @@ Anything you may tweak in the future.
 
 ---
 class: fit-h1, compact
+
 # 7. Use containers and environments (portability and reproducibility)
 
 One of the hardest problems in data science is managing software.
@@ -456,6 +464,7 @@ One of the hardest problems in data science is managing software.
 ]
 
 .fr.db.w-50pct[
+
 ## Containers (Docker, Singularity)
 
 * Completely reproducible system
@@ -472,13 +481,12 @@ One of the hardest problems in data science is managing software.
 class: title, smokescreen
 background-image: url(https://www.mayerdan.com/assets/img/ring-binders.jpg)
 
-# 8., 9., 10. Documentation
+# 8., 9., 10. Documentation <!-- Part 4 -->
 
 ## What is not documented, stays not documented
 
-<!-- ############################ Part 4 ############################ -->
-
 ---
+
 # What to document (Everything!)
 
 .ul-space[
@@ -495,6 +503,7 @@ background-image: url(https://www.mayerdan.com/assets/img/ring-binders.jpg)
 **6 months from now, your future-self will thank you!**
 
 ---
+
 # Where to document (Everywhere!)
 
 .ul-space[
@@ -531,6 +540,7 @@ class: compact
 Add as much information about your samples.
 
 ---
+
 # Top of Scripts
 
 .fl.db.w-50pct[
@@ -544,6 +554,7 @@ Add as much information about your samples.
 ![](/datascience_presentations/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
 
 ---
+
 # Functions and Classes
 
 .fl.db.w-50pct[
@@ -557,6 +568,7 @@ Add as much information about your samples.
 ![](modularize.png# absolute l-6-12th t-0 w-50pct)
 
 ---
+
 # Literate Programming
 
 .fl.db.w-50pct[
@@ -581,6 +593,7 @@ Add as much information about your samples.
 .footer[https://github.com/markusschanta/awesome-jupyter]
 
 ---
+
 # Dedicated Project Blog
 
 .ul-space[
@@ -597,7 +610,8 @@ Add as much information about your samples.
 ![](/datascience_presentations/images/blog.png# absolute l-6-12th t-0 w-50pct)
 
 ---
-# 10 Best Practices
+
+# 10 Best Practices <!-- Summary -->
 
 <ol>
 <li>Use the same structure and names across projects</li>
