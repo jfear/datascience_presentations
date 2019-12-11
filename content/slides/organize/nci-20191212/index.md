@@ -208,39 +208,32 @@ class: img-right-full, compact
 - Workflow Tools
 
 ---
-class: col-2
-
-# Development Environment
-
-- Command Line Editors
-  - Vim, Emacs, Nano
-- Data Science IDEs
-  - <img src="/datascience_presentations/images/rstudio.png" width="30%" style="vertical-align: middle;">
-  - <img src="/datascience_presentations/images/jupyter_logo.png" width="15%" style="vertical-align: middle;">
-
----
 class: img-left-full, compact
 
-# Tools of the trade (VCS)
+# Version Control System (VCS)
 
 ![](/datascience_presentations/images/git_commit.png)
 
-## Version Control Software
+## A.k.a Track Changes
 
-- Use VCS such as git
-> VCS is like MS Words track changes
+- Popular Tools
+  - Git
+  - Mercurial
+  - VCS
+  - CVS
 
-- Use the cloud to store to your code
-> Github, GitLab, and Bitbucket are common places to store
-> your version controlled code.
->
-> You can make code private or public, and it is available 
-> anywhere with internet.
+- Cloud Storage
+  - Github (git)
+  - GitLab (git)
+  - Bitbucket (multi)
+
+- Data Is Different
+  - git-lfs
 
 ---
 class: img-right
 
-# Tools of the trade (Workflows)
+# Workflow Management
 
 ![](/datascience_presentations/images/rnaseq.png)
 
@@ -248,6 +241,35 @@ class: img-right
   - Galaxy
   - Make
   - Snakemake
+
+---
+class: img-right-full
+
+# Development Environment
+
+<!-- TODO: Add vscode figure -->
+![]()
+
+## IDEs Speed Development Time
+
+- Syntax Highlighting
+- Code Completion
+- Refactoring Tools
+- Debugging Tools
+- Integration with version control
+- Integration with containers/environments
+- Remote development ove SSH
+
+---
+class: img-right-full
+
+# Could Development Environment
+
+## Web browser == Dev Env
+
+- Jupyter on steroids
+- Container based environment
+- Automatic Version Control
 
 ---
 class: img-right
