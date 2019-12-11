@@ -31,7 +31,7 @@ class: title, fogscreen
 - IRTA Fellow (NIDDK/NIH)
     - <i class="fas fa-dna"></i> Genomics
     - <i class="fas fa-project-diagram"></i> Gene Regulation
-    - <img src="/images/drosophila-wt.jpg" width="3%"/> Drosophila
+    - <img src="/datascience_presentations/images/drosophila-wt.jpg" width="3%"/> Drosophila
 
 - Contact:
     - <i class="fab fa-github"></i> @jfear
@@ -48,7 +48,7 @@ class: title, fogscreen
 
 ---
 class: title, smokescreen
-background-image: url(/images/organization.jpg)
+background-image: url(/datascience_presentations/images/organization.jpg)
 
 <!-- ############################ Part 1 ############################ -->
 # Why Project Organization
@@ -173,7 +173,7 @@ Make file names descriptive and concise.
 
 ---
 class: compact
-![](/images/lots_o_files.png# fl db h-8-12th absolute l-1 t-2-12th)
+![](/datascience_presentations/images/lots_o_files.png# fl db h-8-12th absolute l-1 t-2-12th)
 
 .fr.db.w-50pct[
 # Poor uses of folders
@@ -236,7 +236,7 @@ background-image: url(http://www.freestufffinder.com/wp-content/uploads/2018/08/
 
 ---
 class: img-left-full, compact
-![](/images/git_commit.png)
+![](/datascience_presentations/images/git_commit.png)
 
 # Tools of the trade (VCS)
 
@@ -259,7 +259,7 @@ class: compact
 
 # Tools of the trade (Workflows)
 
-![](/images/rnaseq.png# h-6-12th absolute l-2-12th t-2-12th db)
+![](/datascience_presentations/images/rnaseq.png# h-6-12th absolute l-2-12th t-2-12th db)
 
 .absolute.t-8-12th[
 * Orchestrate analysis using workflow software
@@ -269,7 +269,7 @@ class: compact
 ]
 
 ---
-![](/images/example_folder.png# absolute t-0 l-0 h-100pct)
+![](/datascience_presentations/images/example_folder.png# absolute t-0 l-0 h-100pct)
 
 .fr.db.w-40pct[
 
@@ -285,7 +285,7 @@ class: compact
 
 ---
 class: compact, fit-h1
-![](/images/example_folder.png# absolute t-0 l-0 h-100pct)
+![](/datascience_presentations/images/example_folder.png# absolute t-0 l-0 h-100pct)
 
 .fr.db.w-40pct[
 ## 1. Use the same folder structure and names across projects
@@ -351,7 +351,7 @@ data # original and external
 ```
 ]
 
-![](/images/snakefile.png# absolute l-40pct t-0 h-100pct)
+![](/datascience_presentations/images/snakefile.png# absolute l-40pct t-0 h-100pct)
 
 ---
 .absolute.l-2.w-40pct[
@@ -371,7 +371,7 @@ src/    # project level package
 ```
 ]
 
-![](/images/modularize.png# absolute l-50pct t-0 w-50pct)
+![](/datascience_presentations/images/modularize.png# absolute l-50pct t-0 w-50pct)
 
 ---
 class: compact
@@ -565,7 +565,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
+![](/datascience_presentations/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
 
 ---
 # Functions and Classes
@@ -578,7 +578,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/images/modularize.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_presentations/images/modularize.png# absolute l-6-12th t-0 w-50pct)
 
 ---
 # Literate Programming
@@ -600,7 +600,7 @@ Add as much information about your samples.
 ]
 ]
 
-![](/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_presentations/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
 
 .footer[https://github.com/markusschanta/awesome-jupyter]
 
@@ -618,7 +618,7 @@ Add as much information about your samples.
     - **hugo**
 ]
 
-![](/images/blog.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_presentations/images/blog.png# absolute l-6-12th t-0 w-50pct)
 
 ---
 # 10 Best Practices
