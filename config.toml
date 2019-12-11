@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://geneticsunderground.com/datascience_presentations/"
 languageCode = "en-us"
 title = "Data Science Talks"
 theme = "story"
