@@ -36,9 +36,8 @@ class: col-2
   - <i class="fab fa-github"></i> [@jfear](https://github.com/jfear)
   - <i class="fas fa-envelope-open-text"></i> justin.fear@nih.gov
 
-<!-- TODO Fix publication URL -->
 .qrcode.db.pa-3.w-90pct.ml-4[]
-<http://talks.geneticsunderground.com>
+<http://geneticsunderground.com/talk>
 
 ---
 class: title, smokescreen
@@ -235,6 +234,7 @@ class: compact
 .absolute.t-3-12th.l-4-12th[
 
 ### Data Is Different
+
 - git-lfs
 ]
 
@@ -252,6 +252,8 @@ class: img-caption
 .absolute.b-2.l-1[Make]
 .absolute.b-2.r-1[Airflow]
 
+.myheader[\> Master Your Weapons]
+
 ---
 class: compact
 
@@ -268,9 +270,12 @@ class: compact
 - Remote development ove SSH
 
 ## Text Editors
+
 - vim
 - emacs
 - nano
+
+.myheader[\> Master Your Weapons]
 
 ---
 class: compact
@@ -280,7 +285,7 @@ class: compact
 ![](/datascience_presentations/images/gigantum_notebook.png# w-60pct absolute r-2 t-0)
 ![](/datascience_presentations/images/gigantum.png# w-30pct absolute l-5-12th b-0)
 
-### Examples
+## Examples
 
 - VScode Online
 - Azure Notebooks
@@ -289,45 +294,60 @@ class: compact
 - CoCalc
 - Binder
 
-### Gigantum
+## Gigantum
 
 - Jupyter + RStudio in the cloud
 - Container based environment
 - Automatic Version Control
 
+.myheader[\> Master Your Weapons]
+
 ---
-class: img-right
+class: col-2, compact
 
-# Project Folder Organization
+# Project Organization
 
-![](/datascience_presentations/images/example_folder.png)
+## General best practices
 
-- Folder structure is personal preference
-- Folder names are personal preference
+- Folder Structure
+- Separate data from scripts
+- Use workflow tools to orchestrate
+- Split out configuration
+- Modularize
+- Use a defined style
+- Use containers and environments
+- Document everything
 
-## There are general .red[*best practices*]
+## Personal preferences
 
-.footer[[Example Project](https://github.com/jfear/example_project)]
+- Folder structure
+- Folder names
+
+[Example Project](https://github.com/jfear/example_project)
 
 ---
 
 .absolute.l-7-12th.w-40pct[
 
-# 1. Use the same folder structure and names across projects
+# 1. Same folder structure and names across projects
 
-## Don't be afraid to tweak
+## But, don't be afraid to tweak
+
 ]
 
 ![](/datascience_presentations/images/example_folder.png# absolute l-0 t-0 h-100pct)
 
+.myheader-right[\> Project Organization]
+
 ---
 class: compact
 
-# 2. Separate original data, generated data, and scripts
+# 2. Separate data from code
 
-## .red[Not stored in version control]
+## .red[Data is NOT stored typically in version control]
 
 .fl.db.w-40pct[
+
 ```bash
 ├── data # original and external
 ├── lcdb-references # multi-project
@@ -347,12 +367,13 @@ class: compact
 ]
 
 .fr.db.w-55pct[
+
 ```bash
 data # original and external
 ├── external
 │   ├── DroID_DPiM_2018-03-29.txt # website
 │   ├── Ferrari_et_al_2006.tsv # paper
-│   ├── Ferrari_et_al_2006.readme # paper details 
+│   ├── Ferrari_et_al_2006.readme # paper details
 │   ├── FlyBase/ # community
 │   └── maria/ # collaborator
 ├── rnaseq_samples # our data
@@ -365,10 +386,12 @@ data # original and external
 
 ]
 
+.myheader[\> Project Organization]
+
 ---
 .absolute.l-2.w-30pct[
 
-# 3. Uses workflows to orchestrate
+# 3. Workflow Orchestration
 
 ```bash
 ./example1-wf
@@ -378,14 +401,17 @@ data # original and external
 ├── scripts/
 └── Snakefile
 ```
+
 ]
 
 ![](/datascience_presentations/images/snakefile.png# absolute l-40pct t-0 h-100pct)
 
----
-.absolute.l-2.w-40pct[
+.myheader[\> Project Organization]
 
-# 4. Modularize reusable code
+---
+class: compact
+
+# 4. Modularize code
 
 ```bash
 lcdb-wf@56c948d  #submodules
@@ -399,44 +425,42 @@ src/    # project level package
 │   └── test_stats.py
 └── setup.py
 ```
-]
 
 ![](/datascience_presentations/images/modularize.png# absolute l-50pct t-0 w-50pct)
+
+.myheader[\> Project Organization]
 
 ---
 class: compact
 
 .absolute.l-2.w-40pct[
 
-# 5. Use a style guide and linters
+# 5. Style guides and linters
 
-* Consistent style improves readability
-* Just google my language and style guide
-* Linters catch syntax erros and point out style problems.
-    - `flake8   # python`
-    - `lintr    # R`
+- Consistent style improves readability
+- Google `my language` and style guide
+- Linters catch syntax errors and point out style problems.
+  - `pylint   # python`
+  - `lintr    # R`
 
-* Fix ugly code with software
-    - `black   # python`
-    - `styler   # R`
+- Fix ugly code with software
+  - `black   # python`
+  - `styler   # R`
 ]
 
 .fr.db.w-50pct[
+
+## Fix ugly code the easy way
+
 <pre><code class="R" style="font-size: .9rem">
 for (i in seq(10)) {
 for (j in seq(100)) {
-if (i == j) {
-print(TRUE)
-} else if (i %% j == 0) {
+if (i == j) {print(TRUE)} else if (i %% j == 0) {
 print("modulo")
-} else {
-print(FALSE)
-}
-}
-}
+} else {print(FALSE)}}}
 </code></pre>
 
-<pre><code class="R" style="font-size: .9rem">
+<pre><code class="R" style="font-size: 1rem">
 for (i in seq(10)) {
   for (j in seq(100)) {
     if (i == j) {
@@ -451,12 +475,15 @@ for (i in seq(10)) {
 </code></pre>
 ]
 
+.myheader[\> Project Organization]
+
 ---
 class: compact
 
 # 6. Split out configuration for consistency
 
 .absolute.l-2.w-40pct[
+
 ```bash
 ./config   # Project config
     ├── common.yaml
@@ -469,6 +496,7 @@ class: compact
     │   └── sampletable.tsv
 
 ```
+
 ]
 
 .fr.db.w-50pct[
@@ -477,28 +505,31 @@ class: compact
 
 Contains info that is needed across the project.
 
-* Project name and github url
-* Assembly and Annotation
-* alpha level
+- Project name and github url
+- Assembly and Annotation
+- alpha level
 
 ## Workflow config
 
 Anything you may tweak in the future.
 
-* Various thresholds
-* Workflow specific references
-* Various Mappings (i.e. file name to title)
+- Various thresholds
+- Workflow specific references
+- Various Mappings (i.e. file name to title)
 
 ]
+
+.myheader[\> Project Organization]
 
 ---
 class: fit-h1, compact
 
-# 7. Use containers and environments (portability and reproducibility)
+# 7. Containers and environments (portability and reproducibility)
 
-One of the hardest problems in data science is managing software.
+## .red[One of the hardest problems in data science is managing software.]
 
 .absolute.l-2.w-40pct[
+
 ```bash
 ./environment.yaml  # project env
 
@@ -507,24 +538,25 @@ One of the hardest problems in data science is managing software.
     ├── scrublet.yaml
     ├── seurat2.yaml
     └── seurat3.yaml
-
-
 ```
+
 ]
 
 .fr.db.w-50pct[
 
 ## Containers (Docker, Singularity)
 
-* Completely reproducible system
-    * Kernel and Software
+- Completely reproducible system
+  - Kernel and Software
 
 ## Environments (Conda, pipenv)
 
-* Install and manage software versions
-* Different versions of software can be installed in different environments
+- Install and manage software versions
+- Different versions of software can be installed in different environments
 
 ]
+
+.myheader[\> Project Organization]
 
 ---
 class: title, smokescreen
@@ -539,35 +571,35 @@ background-image: url(https://www.mayerdan.com/assets/img/ring-binders.jpg)
 # What to document (Everything!)
 
 .ul-space[
-* How was the data generated
-* Record all "experiments"
+
+- How was the data generated
+- Record all "experiments"
 .red[
 - failed attempts
 - comparing different methods
 ]
-* Record the reasoning for any decision points
-* Clearly describe how to get final results
+- Record the reasoning for any decision points
+- Clearly describe how to get final results
+
 ]
 
 **6 months from now, your future-self will thank you!**
+
+.myheader[\> Project Organization > Documentation]
 
 ---
 
 # Where to document (Everywhere!)
 
-.ul-space[
-* Sample/Resource Table
-* README
-* Top of scripts
-* Function/Class Docstrings
-* Code comments (but not too many)
-* Literate Programming (i.e. notebooks)
-* Project Blog
-]
+- Sample/Resource Table
+- README
+- Top of scripts
+- Function/Class Docstrings
+- Code comments (but not too many)
+- Literate Programming (i.e. notebooks)
+- Project Blog
 
----
-layout: true
-.myheader[\>Where to document]
+.myheader[\> Project Organization > Documentation]
 
 ---
 class: compact
@@ -588,39 +620,49 @@ class: compact
 
 Add as much information about your samples.
 
+.myheader[\> Project Organization > Documentation > Where]
+
 ---
+class: compact
 
 # Top of Scripts
 
-.fl.db.w-50pct[
-.ul-space[
-* Describe what the script does
-* Any major decisions that you made
-* Anything to help you remember
-]
+.w-50pct[
+
+- Describe what the script does
+- Any major decisions that you made
+- Anything to help you remember
+
 ]
 
 ![](/datascience_presentations/images/script_doc.png# absolute l-6-12th t-0 h-100pct)
 
+.myheader[\> Project Organization > Documentation > Where]
+
 ---
+class: compact
 
 # Functions and Classes
 
 .fl.db.w-50pct[
-.ul-space[
-* Any function you will call from another script.
-* Add type hints if it is confusing what goes in.
-* Add examples to clearly show what the function does.
-]
+
+- Any function you will call from another script.
+- Add type hints if it is confusing what goes in.
+- Add examples to clearly show what the function does.
+
 ]
 
-![](modularize.png# absolute l-6-12th t-0 w-50pct)
+![](/datascience_presentations/images/modularize.png# absolute l-6-12th t-0 w-50pct)
+
+.myheader[\> Project Organization > Documentation > Where]
 
 ---
+class: compact
 
 # Literate Programming
 
 .fl.db.w-50pct[
+
 ```bash
 ./notebook
     ├── 2019-08-01_bulk_deg.Rmd
@@ -631,32 +673,33 @@ Add as much information about your samples.
     └── permutation_summary.ipynb
 ```
 
-.ul-space[
-* Jupyter Notebooks
-* R Notebooks and Rmarkdown
-]
+- Jupyter Notebooks
+- R Notebooks and Rmarkdown
+
 ]
 
 ![](/datascience_presentations/images/jupyter.png# absolute l-6-12th t-0 w-50pct)
 
+.myheader[\> Project Organization > Documentation > Where]
 .footer[https://github.com/markusschanta/awesome-jupyter]
 
 ---
+class: compact
 
 # Dedicated Project Blog
 
-.ul-space[
-* Aggregate notebooks
-    - `bookdown  # R`
-    - `jupyter webbook  # python`
-* Various static site generators
-    - Pelican
-    - Nikola
-    - jekyll
-    - **hugo**
-]
+- Aggregate notebooks
+  - `bookdown  # R`
+  - `jupyter webbook  # python`
+- Static site generators
+  - Pelican
+  - Nikola
+  - jekyll
+  - **hugo**
 
 ![](/datascience_presentations/images/blog.png# absolute l-6-12th t-0 w-50pct)
+
+.myheader[\> Project Organization > Documentation > Where]
 
 ---
 
@@ -672,22 +715,32 @@ Add as much information about your samples.
 <li>Use containers and environments</li>
 <li style="font-size: 1em;">Document as you go</li>
 <li style="font-size: 1.2em;">Document as you go</li>
-<li style="font-size: 1.6em; font-weigth: bold">Document as you go!</li>
+<li style="font-size: 1.6em; font-weight: bold">Document as you go!</li>
 </ol>
 
 ---
-class: title, fogscreen
-background-image: url(http://www.paautism.org/LinkClick.aspx?fileticket=A1L9cYFyoTg%3D&tabid=101&portalid=0&mid=771&language=en-US)
 
-# Resources
+# Links and Examples
 
----
-layout: true
+.fl.w-50pct[
 
----
-.myheader[\>Resources]
-* Cookiecutter
-* Github
-* Bitbucket
-* Snakemake
-* Data Science git-flow
+## Mine
+
+- [Example Project](https://github.com/jfear/example_project)
+- [scRNASeq Project](https://github.com/jfear/larval_gonad)
+- [Large Remapping Project](https://github.com/jfear/ncbi_remap)
+- [PacBio Project](https://github.com/jfear/dmel_pacbio)
+
+]
+
+.fr.w-50pct[
+
+## Others
+
+- [Cookiecutter Example](https://drivendata.github.io/cookiecutter-data-science/)
+- [Summary of Nobel Paper](https://davetang.org/muse/2018/02/09/organising-computational-biology-projects-cookiecutter/)
+- [Updated concepts Nobel paper](https://medium.com/outlier-bio-blog/a-quick-guide-to-organizing-data-science-projects-updated-for-2016-4cbb1e6dac71)
+- [Short Blog Post](https://towardsdatascience.com/manage-your-data-science-project-structure-in-early-stage-95f91d4d0600)
+- [Short Blog Post](https://www.thinkingondata.com/how-to-organize-data-science-projects/)
+
+]
